@@ -8,6 +8,9 @@ private:
 public:
     int getVolume() const;
     void setVolume(int volume);
+
+    Delivery(int volume, int weight, int reward, int duration);
+
     int getWeight() const;
     void setWeight(int weight);
     int getReward() const;

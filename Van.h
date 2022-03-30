@@ -6,6 +6,8 @@ class Van {
 private:
     int volume, weight, cost;
 public:
+    Van(int volume, int weight, int cost);
+
     int getVolume() const;
     void setVolume(int volume);
     int getWeight() const;

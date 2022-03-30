@@ -31,3 +31,6 @@ int Delivery::getDuration() const {
 void Delivery::setDuration(int duration) {
     Delivery::duration = duration;
 }
+
+Delivery::Delivery(int volume, int weight, int reward, int duration) : volume(volume), weight(weight), reward(reward),
+                                                                       duration(duration) {}

@@ -23,3 +23,5 @@ int Van::getCost() const {
 void Van::setCost(int cost) {
     Van::cost = cost;
 }
+
+Van::Van(int volume, int weight, int cost) : volume(volume), weight(weight), cost(cost) {}
