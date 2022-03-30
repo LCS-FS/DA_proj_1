@@ -1,5 +1,4 @@
-#include <iostream>
-#include <fstream>
+#include <iostream>#include <fstream>
 #include <vector>
 #include "Van.h"
 #include "Delivery.h"
