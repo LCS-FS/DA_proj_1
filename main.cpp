@@ -17,6 +17,7 @@ bool loadDeliveries(vector<Delivery> &deliveries);
 int main() {
     vector<Van> vans;
     vector<Delivery> deliveries;
+    deliveries.push_back(Delivery(0,0,0,0)); //start with a 0,0,0,0 delivery for knapsack algortihm
     loadVans(vans);
     loadDeliveries(deliveries);
     return 0;
