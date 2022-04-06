@@ -24,4 +24,20 @@ void Van::setCost(int cost) {
     Van::cost = cost;
 }
 
-Van::Van(int volume, int weight, int cost) : volume(volume), weight(weight), cost(cost) {}
+Van::Van(int volume, int weight, int cost) : volume(volume), weight(weight), cost(cost), number(0), value(0) {}
+
+int Van::getNumber() const {
+    return number;
+}
+
+void Van::setNumber(int number) {
+    Van::number = number;
+}
+
+int Van::getValue() const {
+    return value;
+}
+
+void Van::setValue(int value) {
+    Van::value = value;
+}

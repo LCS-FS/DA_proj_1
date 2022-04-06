@@ -4,6 +4,8 @@
 #include <string>
 #include "Van.h"
 #include "Delivery.h"
+#include "algorithms.h"
+#include "Combination.h"
 
 using std::cout;
 using std::cin;

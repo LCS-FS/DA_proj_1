@@ -4,7 +4,17 @@
 
 class Van {
 private:
-    int volume, weight, cost;
+    int volume, weight, cost, number, value;
+public:
+    int getValue() const;
+
+    void setValue(int value);
+
+public:
+    int getNumber() const;
+
+    void setNumber(int number);
+
 public:
     Van(int volume, int weight, int cost);
 
