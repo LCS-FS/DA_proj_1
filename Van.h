@@ -4,20 +4,13 @@
 
 class Van {
 private:
-    int volume, weight, cost, number, value;
-public:
-    int getValue() const;
-
-    void setValue(int value);
-
-public:
-    int getNumber() const;
-
-    void setNumber(int number);
-
+    int volume, weight, cost, value;
 public:
     Van(int volume, int weight, int cost);
-
+    int getValue() const;
+    void setValue(int value);
+    int getNumber() const;
+    void setNumber(int number);
     int getVolume() const;
     void setVolume(int volume);
     int getWeight() const;
