@@ -4,19 +4,16 @@
 
 class Van {
 private:
-    int volume, weight, cost, value;
+    int volume, weight, cost;
 public:
     Van(int volume, int weight, int cost);
-    int getValue() const;
-    void setValue(int value);
-    int getNumber() const;
-    void setNumber(int number);
     int getVolume() const;
     void setVolume(int volume);
     int getWeight() const;
     void setWeight(int weight);
     int getCost() const;
     void setCost(int cost);
+    bool const operator==(const Van &v2) const;
 };
 
 

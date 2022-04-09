@@ -21,6 +21,10 @@ int main() {
     vector<Delivery> deliveries;
     loadVans(vans);
     loadDeliveries(deliveries);
+
+    vector<Combination> c1 = cenario1(vans, deliveries);
+
+
     return 0;
 }
 

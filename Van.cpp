@@ -5,7 +5,7 @@ int Van::getVolume() const {
 }
 
 void Van::setVolume(int volume) {
-    Van::volume = volume;
+    this->volume = volume;
 }
 
 int Van::getWeight() const {
@@ -13,7 +13,7 @@ int Van::getWeight() const {
 }
 
 void Van::setWeight(int weight) {
-    Van::weight = weight;
+    this->weight = weight;
 }
 
 int Van::getCost() const {
@@ -21,23 +21,13 @@ int Van::getCost() const {
 }
 
 void Van::setCost(int cost) {
-    Van::cost = cost;
+    this->cost = cost;
 }
 
-Van::Van(int volume, int weight, int cost) : volume(volume), weight(weight), cost(cost), number(0), value(0) {}
+Van::Van(int volume, int weight, int cost) : volume(volume), weight(weight), cost(cost) {}
 
-int Van::getNumber() const {
-    return number;
+bool const Van::operator==(const Van &v2) const {
+    if(volume == v2.getVolume() && weight == v2.getWeight() && cost == v2.getCost()) return true;
+    return false;
 }
 
-void Van::setNumber(int number) {
-    Van::number = number;
-}
-
-int Van::getValue() const {
-    return value;
-}
-
-void Van::setValue(int value) {
-    Van::value = value;
-}

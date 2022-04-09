@@ -3,4 +3,4 @@ project(proj1)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(proj1 main.cpp Van.cpp Van.h Delivery.cpp Delivery.h algorithms.cpp Combination.cpp Combination.h algorithms.h)
+add_executable(proj1 main.cpp Van.cpp Van.h Delivery.cpp Delivery.h algorithms.cpp algorithms.h Combination.cpp Combination.h)

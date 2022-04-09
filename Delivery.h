@@ -15,6 +15,7 @@ public:
     void setReward(int reward);
     int getDuration() const;
     void setDuration(int duration);
+    bool const operator==(const Delivery &D2) const;
 };
 
 
