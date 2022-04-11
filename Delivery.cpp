@@ -5,7 +5,7 @@ int Delivery::getVolume() const {
 }
 
 void Delivery::setVolume(int volume) {
-    Delivery::volume = volume;
+    this->volume = volume;
 }
 
 int Delivery::getWeight() const {
@@ -13,7 +13,7 @@ int Delivery::getWeight() const {
 }
 
 void Delivery::setWeight(int weight) {
-    Delivery::weight = weight;
+    this->weight = weight;
 }
 
 int Delivery::getReward() const {
@@ -21,7 +21,7 @@ int Delivery::getReward() const {
 }
 
 void Delivery::setReward(int reward) {
-    Delivery::reward = reward;
+    this->reward = reward;
 }
 
 int Delivery::getDuration() const {
@@ -29,8 +29,13 @@ int Delivery::getDuration() const {
 }
 
 void Delivery::setDuration(int duration) {
-    Delivery::duration = duration;
+    this->duration = duration;
 }
 
 Delivery::Delivery(int volume, int weight, int reward, int duration) : volume(volume), weight(weight), reward(reward),
                                                                        duration(duration) {}
+
+bool const Delivery::operator==(const Delivery &d2) const {
+    if(volume == d2.getVolume() && weight == d2.getWeight() && reward == d2.getReward() && duration == d2.getDuration()) return true;
+    return false;
+}
