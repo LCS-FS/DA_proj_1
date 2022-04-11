@@ -31,3 +31,8 @@ bool const Van::operator==(const Van &v2) const {
     return false;
 }
 
+bool const Van::operator<(const Van &v2) const {
+    if(weight == v2.getWeight()) return volume < v2.getVolume();
+    return weight < v2.getWeight();
+}
+
