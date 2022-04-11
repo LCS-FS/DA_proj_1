@@ -20,6 +20,7 @@ public:
     void setDeliveries(const std::vector<Delivery> &deliveries);
     void addDelivery(Delivery delivery);
     bool const operator<(const Combination &c2) const;
+    bool const operator==(const Combination &c2) const;
 };
 
 

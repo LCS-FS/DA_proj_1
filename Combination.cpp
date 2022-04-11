@@ -39,3 +39,7 @@ Combination::Combination(const Van &van, const std::vector<Delivery> &deliveries
 bool const Combination::operator<(const Combination &c2) const {
     return value < c2.getValue();
 }
+
+bool const Combination::operator==(const Combination &c2) const {
+    return van == c2.getVan() && deliveries == c2.getDeliveries() && value == c2.getValue();
+}
