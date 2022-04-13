@@ -209,3 +209,8 @@ bool sortByProfit(const Combination &c1, const Combination &c2){
     int profit2 = c2.getValue() - c2.getVan().getCost();
     return profit1 < profit2;
 }
+
+double compose(int x, int y) { //it rounds to 3 decimal cases (ignores whats after)
+    double ans = sqrt(pow(x, 2) + pow(y, 2));
+    return floor(ans*1000) / 1000;
+}

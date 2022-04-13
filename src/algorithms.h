@@ -8,6 +8,7 @@
 #include "Combination.h"
 #include <algorithm>
 #include <string>
+#include <cmath>
 
 using std::vector;
 
@@ -17,5 +18,6 @@ vector<Combination> cenario1(vector<Van> vans, vector<Delivery> deliveries);
 vector<Combination> cenario2(vector<Van> vans, vector<Delivery> deliveries);
 Combination multiple_bi_01_knapsack_values(vector<Van> &vans, vector<Delivery> &deliveries);
 bool sortByProfit(const Combination &c1, const Combination &c2);
+double compose(int x, int y);
 
 #endif //PROJ1_ALGORITHMS_H
