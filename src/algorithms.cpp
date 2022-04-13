@@ -214,3 +214,7 @@ double compose(int x, int y) { //it rounds to 3 decimal cases (ignores whats aft
     double ans = sqrt(pow(x, 2) + pow(y, 2));
     return floor(ans*1000) / 1000;
 }
+
+bool compareComposedDelivery(const Delivery &del1, const Delivery &del2) {
+    return compose(del1.getVolume(), del1.getWeight()) < compose(del2.getVolume(), del2.getWeight());
+}
