@@ -29,7 +29,7 @@ vector<Combination> cenario1(vector<Van> vans, vector<Delivery> deliveries){
         ret[v].setVan(Van(maxV-deliveries[i].getVolume(), maxW - deliveries[i].getWeight(), 0));
     }
 
-
+    //count number of deliveries
     int cnt = 0;
     for(auto comb: ret){
         if(comb.getDeliveries().size() !=0){
@@ -59,6 +59,7 @@ vector<Combination> cenario2(vector<Van> vans, vector<Delivery> deliveries) {
     vector<Combination> regardless;
     vector<Delivery> chosen;
 
+    //progress bar
     int progress = 1;
     std::cout << "It Starts slow but gets faster as it goes on.\n";
     std::cout << "Progress: [" << std::string(50, '-') << "] " << "0%\n";
@@ -70,7 +71,10 @@ vector<Combination> cenario2(vector<Van> vans, vector<Delivery> deliveries) {
         regardless.clear();
         chosen.clear();
 
+        //0-1 knapsack bidimentional
         table = knapsack(deliveries, vans[i]);
+
+        //get highest value
         int value = table[deliveries.size()][vans[i].getWeight()][vans[i].getVolume()];
         int w = vans[i].getWeight(), v = vans[i].getVolume(), n = deliveries.size();
 
@@ -90,12 +94,16 @@ vector<Combination> cenario2(vector<Van> vans, vector<Delivery> deliveries) {
             std::remove(deliveries.begin(), deliveries.end(), d);
         }
 
+        //save combination of van and deliveries
         ret.push_back(Combination(vans[i], chosen, value));
+
+        //progress bar
         std::cout << "Progress: [" << std::string(progress, '#') << std::string(50-progress, '-') << "] " << progress*2 << "%\n";
         progress++;
     }
     std::cout << "Progress: [" << std::string(50, '#') << "] 100%\n";
 
+    //price, reward, profit, number of vans stats
     int value = 0;
     int price = 0;
     for(auto comb : ret){
