@@ -19,5 +19,6 @@ Combination multiple_bi_01_knapsack_values(vector<Van> &vans, vector<Delivery> &
 vector<Combination> cenario1Bin(vector<Van> vans, vector<Delivery> deliveries);
 bool sortByProfit(const Combination &c1, const Combination &c2);
 bool sortByPWeightVolume(const Delivery &d1, const Delivery &d2);
+bool sortByCost(const Van &v1, const Van &v2);
 
 #endif //PROJ1_ALGORITHMS_H

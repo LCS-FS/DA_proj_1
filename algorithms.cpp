@@ -138,38 +138,43 @@ vector<Combination> cenario2(vector<Van> vans, vector<Delivery> deliveries) {
     vector<Combination> ret;
     vector<Van> auxV;
     vector<Delivery> auxD;
+    vector<vector<vector<int>>> table;
+    vector<Combination> regardless;
+    vector<Delivery> chosen;
+
     int progress = 1;
     std::cout << "It Starts slow but gets faster as it goes on.\n";
     std::cout << "Progress: [" << std::string(50, '-') << "] " << "0%\n";
-    //fake best for comparison
-    Van fakeVan(-1,-1,-1);
-    vector<Delivery> fakeDel = {Delivery(-1, -1, -1, -1)};
-    int fakeVal = -1;
-    Combination fakeComb(fakeVan, fakeDel, fakeVal);
+
+
+    //sort vans by cost
+    std::sort(vans.begin(), vans.end(), sortByCost);
 
     for(int i = 0; i < vans.size(); i++){
+        regardless.clear();
+        chosen.clear();
 
-        //best combination with considering all vans and deliveries that havent been used so far
-        Combination best = multiple_bi_01_knapsack_values(vans, deliveries);
-        if(best == fakeComb) break; //all remaining combinations have negative profit
+        table = knapsack(deliveries, vans[i]);
+        int value = table[deliveries.size()][vans[i].getWeight()][vans[i].getVolume()];
+        int w = vans[i].getWeight(), v = vans[i].getVolume(), n = deliveries.size();
 
-        auxV.clear();
-        auxD.clear();
-
-        //remove chosen van from poll of available vans
-        for(auto van:vans){
-            if(!(van == best.getVan())) auxV.push_back(van);
+        //save the chosen deliveries
+        for(int k = n; k > 0; k--){
+            if(table[k][w][v] != table[k-1][w][v]){
+                chosen.push_back(deliveries[k-1]);
+                w -= deliveries[k-1].getWeight();
+                v -= deliveries[k-1].getVolume();
+            }
         }
-        vans = auxV;
+        //if profit is negative stop
+        if(value - vans[i].getCost() <= 0) break;
 
-        //removed chosen deliveries from poll of available deliveries
-        for(auto d1 :deliveries){
-            if(std::find(best.getDeliveries().begin(), best.getDeliveries().end(), d1) == best.getDeliveries().end()) auxD.push_back(d1);
+        //remove deliveries from the poll
+        for(auto d :chosen){
+            std::remove(deliveries.begin(), deliveries.end(), d);
         }
 
-        deliveries = auxD;
-
-        ret.push_back(best);
+        ret.push_back(Combination(vans[i], chosen, value));
         std::cout << "Progress: [" << std::string(progress, '#') << std::string(50-progress, '-') << "] " << progress*2 << "%\n";
         progress++;
     }
@@ -259,4 +264,8 @@ vector<vector<vector<int>>> knapsack(vector<Delivery> deliveries, Van van){
         }
     }
     return table;
+}
+
+bool sortByCost(const Van &v1, const Van &v2){
+    return v1.getCost() < v2.getCost();
 }
