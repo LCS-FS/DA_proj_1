@@ -24,7 +24,6 @@ int main() {
 
 //    vector<Combination> c1 = cenario1(vans, deliveries);
     vector<Combination> c2 = cenario2(vans, deliveries);
-//    vector<Combination> c1 = cenario1Bin(vans, deliveries);
     return 0;
 }
 
