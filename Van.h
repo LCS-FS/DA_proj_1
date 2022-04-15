@@ -14,6 +14,7 @@ public:
     int getCost() const;
     void setCost(int cost);
     bool const operator==(const Van &v2) const;
+    bool const operator<(const Van &v2) const;
 };
 
 

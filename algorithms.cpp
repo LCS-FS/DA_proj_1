@@ -32,29 +32,7 @@ Combination multiple_bi_01_knapsack(vector<Van> &vans, vector<Delivery> &deliver
     return regardless[regardless.size()-1]; //return combination with highest value
 }
 
-vector<vector<vector<int>>> knapsack(vector<Delivery> deliveries, Van van){
-    int maxW = van.getWeight(), maxV = van.getVolume(), n = deliveries.size();
-    int current, last;
-    //start the cube all as 0s
-    vector<vector<vector<int>>> table(n+1, vector<vector<int>>(maxW+1, vector<int>(maxV+1)));
 
-    for(int i = 1; i <= n; i++){
-        for(int w = 0; w <= maxW; w++){
-            for(int v = 0; v <= maxV; v++){
-                //if delivery i is heavier than the chosen weight, the cell will stay the same as the previous cell
-                if(deliveries[i-1].getWeight() > w) table[i][w][v] = table[i-1][w][v];
-                //if delivey i has higher volume than the chosen volume, the cell will stay the same as the previous cell
-                else if(deliveries[i-1].getVolume() > v) table[i][w][v] = table[i-1][w][v];
-                else{
-                    last = table[i-1][w][v]; //previous value
-                    current = table[i-1][w - deliveries[i-1].getWeight()][v - deliveries[i-1].getVolume()] + deliveries[i-1].getReward(); //valor atual + valor que caiba
-                    table[i][w][v] = std::max(last, current);
-                }
-            }
-        }
-    }
-    return table;
-}
 
 vector<Combination> cenario1(vector<Van> vans, vector<Delivery> deliveries) {
     vector<Combination> ret;
@@ -104,6 +82,55 @@ vector<Combination> cenario1(vector<Van> vans, vector<Delivery> deliveries) {
     std::cout << "number of items " << value;
     return ret;
 }
+
+vector<Combination> cenario1Bin(vector<Van> vans, vector<Delivery> deliveries){
+    vector<Combination> ret, ret2;
+    vector<Delivery> empty;
+
+    //sort deliveries by weight and then volume
+    std::sort(deliveries.begin(), deliveries.end(), sortByPWeightVolume);
+
+    //sort vans by weight and then by volume
+    std::sort(vans.begin(), vans.end());
+
+    //create combinations with all vans so that indices match
+    for(auto van: vans){
+        ret.push_back(Combination(van, empty, 0));
+    }
+
+    for(int i = 0; i < deliveries.size(); i++){
+        //find best van that can accomudate the delivery
+        int v = 0;
+        for (v; v < vans.size(); v++)
+            if(ret[v].getVan().getWeight() >= deliveries[i].getWeight() && ret[v].getVan().getVolume() >= deliveries[i].getVolume()) break;
+
+        //v is now the index for the best van for the item
+        int maxV = ret[v].getVan().getVolume(), maxW = ret[v].getVan().getWeight();
+
+        ret[v].addDelivery(deliveries[i]);
+        //update weight and volume available to the van
+        ret[v].setVan(Van(maxV-deliveries[i].getVolume(), maxW - deliveries[i].getWeight(), 0));
+    }
+
+
+    int cnt = 0;
+    for(auto comb: ret){
+        if(comb.getDeliveries().size() !=0){
+            ret2.push_back(comb);
+            cnt += comb.getDeliveries().size();
+        }
+    }
+
+    std::cout << "number of vans " << ret2.size() << std::endl;
+    std::cout << "number of deliveries " << cnt << std::endl;
+    return ret;
+}
+
+bool sortByPWeightVolume(const Delivery &d1, const Delivery &d2){
+    if(d1.getWeight() == d2.getWeight()) return d1.getVolume() < d2.getVolume();
+    return d1.getWeight() < d2.getWeight();
+}
+
 //==================================================================================================================================
 
 
@@ -208,4 +235,28 @@ bool sortByProfit(const Combination &c1, const Combination &c2){
     int profit1 = c1.getValue() - c1.getVan().getCost();
     int profit2 = c2.getValue() - c2.getVan().getCost();
     return profit1 < profit2;
+}
+
+vector<vector<vector<int>>> knapsack(vector<Delivery> deliveries, Van van){
+    int maxW = van.getWeight(), maxV = van.getVolume(), n = deliveries.size();
+    int current, last;
+    //start the cube all as 0s
+    vector<vector<vector<int>>> table(n+1, vector<vector<int>>(maxW+1, vector<int>(maxV+1)));
+
+    for(int i = 1; i <= n; i++){
+        for(int w = 0; w <= maxW; w++){
+            for(int v = 0; v <= maxV; v++){
+                //if delivery i is heavier than the chosen weight, the cell will stay the same as the previous cell
+                if(deliveries[i-1].getWeight() > w) table[i][w][v] = table[i-1][w][v];
+                    //if delivey i has higher volume than the chosen volume, the cell will stay the same as the previous cell
+                else if(deliveries[i-1].getVolume() > v) table[i][w][v] = table[i-1][w][v];
+                else{
+                    last = table[i-1][w][v]; //previous value
+                    current = table[i-1][w - deliveries[i-1].getWeight()][v - deliveries[i-1].getVolume()] + deliveries[i-1].getReward(); //valor atual + valor que caiba
+                    table[i][w][v] = std::max(last, current);
+                }
+            }
+        }
+    }
+    return table;
 }
