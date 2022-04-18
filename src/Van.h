@@ -1,6 +1,10 @@
 #ifndef PROJ1_VAN_H
 #define PROJ1_VAN_H
 
+#include "Delivery.h"
+#include <vector>
+
+using namespace std;
 
 class Van {
 private:
@@ -14,6 +18,7 @@ public:
     int getCost() const;
     void setCost(int cost);
     bool const operator==(const Van &v2) const;
+    vector<Delivery> assigned;
 };
 
 

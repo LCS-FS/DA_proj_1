@@ -218,3 +218,28 @@ double compose(int x, int y) { //it rounds to 3 decimal cases (ignores whats aft
 bool compareComposedDelivery(const Delivery &del1, const Delivery &del2) {
     return compose(del1.getVolume(), del1.getWeight()) < compose(del2.getVolume(), del2.getWeight());
 }
+
+vector<Delivery> firstFitIncreasingCen3(vector<Delivery> &deliveries) {
+    unsigned time = 28800;
+    bool done = false;
+    vector<Delivery> result;
+    std::sort(deliveries.begin(), deliveries.end(), compareTime);
+    auto delPtr = deliveries.begin();
+    while (!done) {
+        unsigned thisDuration = delPtr->getDuration();
+        if (thisDuration < time && delPtr != deliveries.end()) {
+            time -= thisDuration;
+            result.push_back(*delPtr);
+            delPtr++;
+        } else {
+            done = true;
+        }
+    }
+    return result;
+}
+
+bool compareTime(const Delivery &del1, const Delivery &del2) {
+    return (del1.getDuration() < del2.getDuration());
+}
+
+

@@ -20,6 +20,7 @@ Combination multiple_bi_01_knapsack_values(vector<Van> &vans, vector<Delivery> &
 bool sortByProfit(const Combination &c1, const Combination &c2);
 double compose(int x, int y);
 bool compareComposedDelivery(const Delivery &del1, const Delivery &del2);
-
+vector<Delivery> firstFitIncreasingCen3(vector<Delivery> &deliveries);
+bool compareTime(const Delivery &del1, const Delivery &del2);
 
 #endif //PROJ1_ALGORITHMS_H

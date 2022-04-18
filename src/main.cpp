@@ -19,18 +19,18 @@ bool loadDeliveries(vector<Delivery> &deliveries);
 int main() {
     vector<Van> vans;
     vector<Delivery> deliveries;
-    loadVans(vans);
-    loadDeliveries(deliveries);
-
-//    vector<Combination> c1 = cenario1(vans, deliveries);
-    vector<Combination> c2 = cenario2(vans, deliveries);
+    if (!loadVans(vans))
+        cout << "loading vans failed" << endl;
+    if (!loadDeliveries(deliveries))
+        cout << "loading deliveries failed" << endl;
+    cout << "made " << firstFitIncreasingCen3(deliveries).size() << " deliveries today.";
 
     return 0;
 }
 
 bool loadVans(vector<Van> &vans) {
     ifstream file;
-    file.open("../carrinhas.txt");
+    file.open("/home/jpdat/Documents/FEUP/2Ano2Semestre/DA/DA_proj_1/src/carrinhas.txt");
     if(!file.is_open()) return false; //file didnt open, perhaps not found
 
     string throwaway;
@@ -45,7 +45,7 @@ bool loadVans(vector<Van> &vans) {
 
 bool loadDeliveries(vector<Delivery> &deliveries) {
     ifstream file;
-    file.open("../encomendas.txt");
+    file.open("/home/jpdat/Documents/FEUP/2Ano2Semestre/DA/DA_proj_1/src/encomendas.txt");
     if(!file.is_open()) return false; //file didnt open, perhaps not found
 
     string throwaway;
