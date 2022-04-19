@@ -202,7 +202,7 @@ bool loadVans(vector<Van> &vans) {
 
 bool loadDeliveries(vector<Delivery> &deliveries) {
     ifstream file;
-    file.open("../../input/carrinhas.txt");
+    file.open("../../input/encomendas.txt");
     if(!file.is_open()) return false; //file didnt open, perhaps not found
 
     string throwaway;
