@@ -24,5 +24,6 @@ vector<Delivery> firstFitIncreasingCen3(vector<Delivery> &deliveries);
 bool compareTime(const Delivery &del1, const Delivery &del2);
 bool loadVans(vector<Van> &vans);
 bool loadDeliveries(vector<Delivery> &deliveries);
+void printCombinations(const vector<Combination> &combs, const bool &cenario);
 
 #endif //PROJ1_ALGORITHMS_H

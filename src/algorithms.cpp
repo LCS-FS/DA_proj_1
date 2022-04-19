@@ -41,13 +41,9 @@ vector<Combination> cenario1(vector<Van> vans, vector<Delivery> deliveries){
     for(auto comb: ret){
         if(comb.getDeliveries().size() !=0){
             ret2.push_back(comb);
-            cnt += comb.getDeliveries().size();
         }
     }
-
-    std::cout << "number of vans " << ret2.size() << std::endl;
-    std::cout << "number of deliveries " << cnt << std::endl;
-    return ret;
+    return ret2;
 }
 
 bool sortByPWeightVolume(const Delivery &d1, const Delivery &d2){
@@ -109,18 +105,6 @@ vector<Combination> cenario2(vector<Van> vans, vector<Delivery> deliveries) {
         progress++;
     }
     std::cout << "Progress: [" << std::string(50, '#') << "] 100%\n";
-
-    //price, reward, profit, number of vans stats
-    int value = 0;
-    int price = 0;
-    for(auto comb : ret){
-        value += comb.getValue();
-        price += comb.getVan().getCost();
-    }
-    std::cout << "number of vans " << ret.size() << std::endl;
-    std::cout << "total value " << value << std::endl;
-    std::cout << "price " << price << std::endl;
-    std::cout << "profit " << value-price << std::endl;
 
     return ret;
 }
@@ -213,4 +197,40 @@ bool loadDeliveries(vector<Delivery> &deliveries) {
         deliveries.push_back(Delivery(volume, weight, reward, duration)); //create delivery object from file and add it to vector
     }
     return true;
+}
+//false = cenario 1         true = cenario 2
+void printCombinations(const vector<Combination> &combs, const bool &cenario){
+    int cnt = 0; //counting number of deliveries for cenario 1 stats
+    cout << '\n';
+
+    for(auto comb : combs){
+        cout << "Van:   Volume: " << comb.getVan().getVolume() << "    Weight: " << comb.getVan().getWeight() << "    Cost: " << comb.getVan().getCost() << '\n';
+
+        for(auto delivery: comb.getDeliveries()){
+            cout << "        || Delivery:    Volume: " << delivery.getVolume() << string( 8-to_string(delivery.getVolume()).length(), ' ')
+            << "Weight: " << delivery.getWeight() << string( 8- to_string(delivery.getWeight()).length(), ' ') << "Reward: "
+            << delivery.getReward() << string(8- to_string(delivery.getReward()).length(), ' ') << "Duration: " << delivery.getDuration() << '\n';
+        }
+        cnt += comb.getDeliveries().size();
+    }
+    cout << '\n';
+    //scenario specific statistics
+    if(!cenario){    //cenario1
+        std::cout << "number of vans " << combs.size() << std::endl;
+        std::cout << "number of deliveries " << cnt << std::endl;
+    }
+    else{
+        //price, reward, profit, number of vans stats
+        int value = 0;
+        int price = 0;
+        for(auto comb : combs){
+            value += comb.getValue();
+            price += comb.getVan().getCost();
+        }
+        std::cout << "number of vans " << combs.size() << std::endl;
+        std::cout << "total value " << value << std::endl;
+        std::cout << "price " << price << std::endl;
+        std::cout << "profit " << value-price << std::endl;
+    }
+    cout << '\n';
 }

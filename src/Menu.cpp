@@ -35,10 +35,10 @@ int Menu::run() {
 
     switch (option) {
         case 1:
-             cenario1(vans, deliveries);
+            printCombinations(cenario1(vans, deliveries), false);
             break;
         case 2:
-             cenario2(vans, deliveries);
+            printCombinations(cenario2(vans, deliveries), true);
             break;
         case 3:
             cout << "Made " << firstFitIncreasingCen3(deliveries).size() << " deliveries today." << endl;
