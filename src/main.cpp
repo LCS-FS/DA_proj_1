@@ -23,14 +23,14 @@ int main() {
         cout << "loading vans failed" << endl;
     if (!loadDeliveries(deliveries))
         cout << "loading deliveries failed" << endl;
-    cout << "made " << firstFitIncreasingCen3(deliveries).size() << " deliveries today.";
+    // cout << "made " << firstFitIncreasingCen3(deliveries).size() << " deliveries today.";
 
     return 0;
 }
 
 bool loadVans(vector<Van> &vans) {
     ifstream file;
-    file.open("/home/jpdat/Documents/FEUP/2Ano2Semestre/DA/DA_proj_1/src/carrinhas.txt");
+    file.open("src/carrinhas.txt");
     if(!file.is_open()) return false; //file didnt open, perhaps not found
 
     string throwaway;
@@ -45,7 +45,7 @@ bool loadVans(vector<Van> &vans) {
 
 bool loadDeliveries(vector<Delivery> &deliveries) {
     ifstream file;
-    file.open("/home/jpdat/Documents/FEUP/2Ano2Semestre/DA/DA_proj_1/src/encomendas.txt");
+    file.open("src/carrinhas.txt");
     if(!file.is_open()) return false; //file didnt open, perhaps not found
 
     string throwaway;
