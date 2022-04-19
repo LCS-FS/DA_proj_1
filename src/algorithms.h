@@ -9,6 +9,7 @@
 #include <algorithm>
 #include <string>
 #include <cmath>
+#include <fstream>
 
 using std::vector;
 
@@ -21,6 +22,7 @@ double compose(int x, int y);
 bool compareComposedDelivery(const Delivery &del1, const Delivery &del2);
 vector<Delivery> firstFitIncreasingCen3(vector<Delivery> &deliveries);
 bool compareTime(const Delivery &del1, const Delivery &del2);
-
+bool loadVans(vector<Van> &vans);
+bool loadDeliveries(vector<Delivery> &deliveries);
 
 #endif //PROJ1_ALGORITHMS_H
