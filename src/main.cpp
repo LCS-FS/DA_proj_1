@@ -13,7 +13,7 @@ using std::ifstream;
 int main() {
 
     Menu menu;
-    menu.run();
+    while (menu.run()) {}
 
     return 0;
 }

@@ -187,7 +187,7 @@ bool compareTime(const Delivery &del1, const Delivery &del2) {
 
 bool loadVans(vector<Van> &vans) {
     ifstream file;
-    file.open("../../src/carrinhas.txt");
+    file.open("../../input/carrinhas.txt");
     if(!file.is_open()) return false; //file didnt open, perhaps not found
 
     string throwaway;
@@ -202,7 +202,7 @@ bool loadVans(vector<Van> &vans) {
 
 bool loadDeliveries(vector<Delivery> &deliveries) {
     ifstream file;
-    file.open("../../src/carrinhas.txt");
+    file.open("../../input/carrinhas.txt");
     if(!file.is_open()) return false; //file didnt open, perhaps not found
 
     string throwaway;

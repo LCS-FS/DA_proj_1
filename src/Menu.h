@@ -15,7 +15,8 @@ class Menu {
     const string firstDisplay = "Welcome to the package delivery interface. Please select the desired scenario\n";
     const string scenarioOptions = "1 - Fitting packages in least vans (Scenario 1)\n"
                              "2 - Most profitable distribution (Scenario 2)\n"
-                             "3 - Lesser delivery time (Scenario 3)\n";
+                             "3 - Lesser delivery time (Scenario 3)\n"
+                             "4 - Finish\n";
     const string invalidInput = "That input is not valid!\n"
                                 "Please try again!\n";
     vector<Van> vans;
@@ -25,7 +26,7 @@ public:
     Menu();
     ~Menu();
     int intInput(int min, int max);
-    void run();
+    int run();
 };
 
 

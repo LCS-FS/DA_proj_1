@@ -23,36 +23,37 @@ int Menu::intInput(int min, int max) {
     return output;
 }
 
-void Menu::run() {
+int Menu::run() {
     int option;
 
     cout << firstDisplay;
     cout << scenarioOptions;
 
     do {
-      option = intInput(1, 3);
+      option = intInput(1, 4);
     } while (option == -1);
 
     switch (option) {
         case 1:
-            cenario1(vans, deliveries);
-            //do something with the result
+            // cenario1(vans, deliveries);
             break;
         case 2:
-            cenario2(vans, deliveries);
-            // do something with the result
+            // cenario2(vans, deliveries);
             break;
         case 3:
             cout << "Made " << firstFitIncreasingCen3(deliveries).size() << " deliveries today." << endl;
             break;
         default:
-            break;
+            return 0;
     }
+    return 1;
 }
 
 Menu::Menu() {
-    loadVans(vans);
-    loadDeliveries(deliveries);
+    if (!loadVans(vans))
+        cout << "failed loading vans" << endl;
+    if (!loadDeliveries(deliveries))
+        cout << "failed loading deliveries" << endl;
 }
 
 Menu::~Menu() = default;
