@@ -1,5 +1,12 @@
 #include "algorithms.h"
+/// \file
+/// Algorithms for each scenario and auxiliary functions
 
+/// Algorithm for cenario 1
+/// returns a vector of Combinations representing the best distribution of deliveries per van, so that we minimize the number of used vans \n
+/// Time Complexity: O(n^2)
+/// \param vans
+/// \param deliveries
 vector<Combination> cenario1(vector<Van> vans, vector<Delivery> deliveries){
     vector<Combination> ret, ret2;
     vector<Delivery> empty;

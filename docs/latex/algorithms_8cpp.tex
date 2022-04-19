@@ -1,0 +1,59 @@
+\hypertarget{algorithms_8cpp}{}\doxysection{src/algorithms.cpp File Reference}
+\label{algorithms_8cpp}\index{src/algorithms.cpp@{src/algorithms.cpp}}
+{\ttfamily \#include \char`\"{}algorithms.\+h\char`\"{}}\newline
+Include dependency graph for algorithms.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{algorithms_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \mbox{\hyperlink{classCombination}{Combination}} $>$ \mbox{\hyperlink{algorithms_8cpp_ab9cb7932b4b5db6fa95884f1067070ad}{cenario1}} (vector$<$ \mbox{\hyperlink{classVan}{Van}} $>$ vans, vector$<$ \mbox{\hyperlink{classDelivery}{Delivery}} $>$ deliveries)
+\item 
+\mbox{\Hypertarget{algorithms_8cpp_ab1a4b74766408cc389e2e89947ff6e29}\label{algorithms_8cpp_ab1a4b74766408cc389e2e89947ff6e29}} 
+bool {\bfseries sort\+By\+P\+Weight\+Volume} (const \mbox{\hyperlink{classDelivery}{Delivery}} \&d1, const \mbox{\hyperlink{classDelivery}{Delivery}} \&d2)
+\item 
+\mbox{\Hypertarget{algorithms_8cpp_a7a9447a3e6b4ad117f49b7df9d4679e8}\label{algorithms_8cpp_a7a9447a3e6b4ad117f49b7df9d4679e8}} 
+vector$<$ \mbox{\hyperlink{classCombination}{Combination}} $>$ {\bfseries cenario2} (vector$<$ \mbox{\hyperlink{classVan}{Van}} $>$ vans, vector$<$ \mbox{\hyperlink{classDelivery}{Delivery}} $>$ deliveries)
+\item 
+\mbox{\Hypertarget{algorithms_8cpp_a2f432514737fd4ce51457ef7a9d62267}\label{algorithms_8cpp_a2f432514737fd4ce51457ef7a9d62267}} 
+vector$<$ vector$<$ vector$<$ int $>$ $>$ $>$ {\bfseries knapsack} (vector$<$ \mbox{\hyperlink{classDelivery}{Delivery}} $>$ deliveries, \mbox{\hyperlink{classVan}{Van}} van)
+\item 
+\mbox{\Hypertarget{algorithms_8cpp_ad7d25a45cd343a546e775ed659b246de}\label{algorithms_8cpp_ad7d25a45cd343a546e775ed659b246de}} 
+bool {\bfseries sort\+By\+Cost} (const \mbox{\hyperlink{classVan}{Van}} \&v1, const \mbox{\hyperlink{classVan}{Van}} \&v2)
+\item 
+\mbox{\Hypertarget{algorithms_8cpp_a9714c7d64c34e177a849b0c70a14fba1}\label{algorithms_8cpp_a9714c7d64c34e177a849b0c70a14fba1}} 
+double {\bfseries compose} (int x, int y)
+\item 
+\mbox{\Hypertarget{algorithms_8cpp_a67acf3e35ac14a78f3237325f9c0b94b}\label{algorithms_8cpp_a67acf3e35ac14a78f3237325f9c0b94b}} 
+bool {\bfseries compare\+Composed\+Delivery} (const \mbox{\hyperlink{classDelivery}{Delivery}} \&del1, const \mbox{\hyperlink{classDelivery}{Delivery}} \&del2)
+\item 
+\mbox{\Hypertarget{algorithms_8cpp_a6628f62391b26f1c4d48df168d30acf7}\label{algorithms_8cpp_a6628f62391b26f1c4d48df168d30acf7}} 
+vector$<$ \mbox{\hyperlink{classDelivery}{Delivery}} $>$ {\bfseries first\+Fit\+Increasing\+Cen3} (vector$<$ \mbox{\hyperlink{classDelivery}{Delivery}} $>$ \&deliveries)
+\item 
+\mbox{\Hypertarget{algorithms_8cpp_aaadd4453ccaf2439f70caa4e7020b14c}\label{algorithms_8cpp_aaadd4453ccaf2439f70caa4e7020b14c}} 
+bool {\bfseries compare\+Time} (const \mbox{\hyperlink{classDelivery}{Delivery}} \&del1, const \mbox{\hyperlink{classDelivery}{Delivery}} \&del2)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Algorithms for each scenario and auxiliary functions 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{algorithms_8cpp_ab9cb7932b4b5db6fa95884f1067070ad}\label{algorithms_8cpp_ab9cb7932b4b5db6fa95884f1067070ad}} 
+\index{algorithms.cpp@{algorithms.cpp}!cenario1@{cenario1}}
+\index{cenario1@{cenario1}!algorithms.cpp@{algorithms.cpp}}
+\doxysubsubsection{\texorpdfstring{cenario1()}{cenario1()}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{classCombination}{Combination}}$>$ cenario1 (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classVan}{Van}} $>$}]{vans,  }\item[{vector$<$ \mbox{\hyperlink{classDelivery}{Delivery}} $>$}]{deliveries }\end{DoxyParamCaption})}
+
+Algorithm for cenario 1 returns a vector of Combinations representing the best distribution of deliveries per van, so that we minimize the number of used vans ~\newline
+ Time Complexity\+: O(n$^\wedge$2) 
+\begin{DoxyParams}{Parameters}
+{\em vans} & \\
+\hline
+{\em deliveries} & \\
+\hline
+\end{DoxyParams}

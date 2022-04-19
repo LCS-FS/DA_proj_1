@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['combination_0',['Combination',['../classCombination.html',1,'']]]
+  ['algorithms_2ecpp_0',['algorithms.cpp',['../algorithms_8cpp.html',1,'']]]
 ];
