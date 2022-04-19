@@ -242,4 +242,34 @@ bool compareTime(const Delivery &del1, const Delivery &del2) {
     return (del1.getDuration() < del2.getDuration());
 }
 
+bool loadVans(vector<Van> &vans) {
+    ifstream file;
+    file.open("../../src/carrinhas.txt");
+    if(!file.is_open()) return false; //file didnt open, perhaps not found
+
+    string throwaway;
+    int volume, weight, cost;
+    file >> throwaway >> throwaway >> throwaway; //throaway first line;
+
+    while(file >> volume >> weight >> cost){
+        vans.push_back(Van(volume, weight, cost)); //create van object from file and add it to vector
+    }
+    return true;
+}
+
+bool loadDeliveries(vector<Delivery> &deliveries) {
+    ifstream file;
+    file.open("../../src/carrinhas.txt");
+    if(!file.is_open()) return false; //file didnt open, perhaps not found
+
+    string throwaway;
+    int volume, weight, reward, duration;
+    file >> throwaway >> throwaway >> throwaway >> throwaway; //throaway first line;
+
+    while(file >> volume >> weight >> reward >> duration){
+        deliveries.push_back(Delivery(volume, weight, reward, duration)); //create delivery object from file and add it to vector
+    }
+    return true;
+}
+
 
