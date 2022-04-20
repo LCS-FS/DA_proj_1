@@ -1,0 +1,41 @@
+\hypertarget{Menu_8h_source}{}\doxysection{Menu.\+h}
+\label{Menu_8h_source}\index{src/Menu.h@{src/Menu.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by jpdat on 19-\/04-\/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef PROJ1\_MENU\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define PROJ1\_MENU\_H4}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}algorithms.h"{}}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{class }\mbox{\hyperlink{classMenu}{Menu}} \{}
+\DoxyCodeLine{15     \textcolor{keyword}{const} \textcolor{keywordtype}{string} firstDisplay = \textcolor{stringliteral}{"{}Welcome to the package delivery interface. Please select the desired scenario\(\backslash\)n"{}};}
+\DoxyCodeLine{16     \textcolor{keyword}{const} \textcolor{keywordtype}{string} scenarioOptions = \textcolor{stringliteral}{"{}1 -\/ Fitting packages in least vans (Scenario 1)\(\backslash\)n"{}}}
+\DoxyCodeLine{17                              \textcolor{stringliteral}{"{}2 -\/ Most profitable distribution (Scenario 2)\(\backslash\)n"{}}}
+\DoxyCodeLine{18                              \textcolor{stringliteral}{"{}3 -\/ Lesser delivery time (Scenario 3)\(\backslash\)n"{}}}
+\DoxyCodeLine{19                              \textcolor{stringliteral}{"{}4 -\/ Finish\(\backslash\)n"{}};}
+\DoxyCodeLine{20     \textcolor{keyword}{const} \textcolor{keywordtype}{string} invalidInput = \textcolor{stringliteral}{"{}That input is not valid!\(\backslash\)n"{}}}
+\DoxyCodeLine{21                                 \textcolor{stringliteral}{"{}Please try again!\(\backslash\)n"{}};}
+\DoxyCodeLine{22     vector<Van> vans;}
+\DoxyCodeLine{23     vector<Delivery> deliveries;}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{keyword}{public}:}
+\DoxyCodeLine{26     \mbox{\hyperlink{classMenu_ad466dd83355124a6ed958430450bfe94}{Menu}}();}
+\DoxyCodeLine{27     \mbox{\hyperlink{classMenu_a831387f51358cfb88cd018e1777bc980}{\string~Menu}}();}
+\DoxyCodeLine{28     \textcolor{keywordtype}{int} \mbox{\hyperlink{classMenu_adb390c48051860718e1e535ffd557fab}{intInput}}(\textcolor{keywordtype}{int} min, \textcolor{keywordtype}{int} max);}
+\DoxyCodeLine{29     \textcolor{keywordtype}{int} \mbox{\hyperlink{classMenu_af93a970cdfec463a8cb25ca65bf51da5}{run}}();}
+\DoxyCodeLine{30 \};}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//PROJ1\_MENU\_H}}
+
+\end{DoxyCode}

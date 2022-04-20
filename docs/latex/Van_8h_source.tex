@@ -1,0 +1,32 @@
+\hypertarget{Van_8h_source}{}\doxysection{Van.\+h}
+\label{Van_8h_source}\index{src/Van.h@{src/Van.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef PROJ1\_VAN\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define PROJ1\_VAN\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}Delivery.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{class }\mbox{\hyperlink{classVan}{Van}} \{}
+\DoxyCodeLine{10 \textcolor{keyword}{private}:}
+\DoxyCodeLine{11     \textcolor{keywordtype}{int} volume, weight, cost;}
+\DoxyCodeLine{12 \textcolor{keyword}{public}:}
+\DoxyCodeLine{13     \mbox{\hyperlink{classVan_a4ad27d9f0eab99f20c40fb06d9899fb9}{Van}}(\textcolor{keywordtype}{int} volume, \textcolor{keywordtype}{int} weight, \textcolor{keywordtype}{int} cost);}
+\DoxyCodeLine{14     \textcolor{keywordtype}{int} \mbox{\hyperlink{classVan_acc48238aaed58d966f693ca5f4875625}{getVolume}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{15     \textcolor{keywordtype}{void} \mbox{\hyperlink{classVan_ab7088875c1e783a67b64e148c83b6380}{setVolume}}(\textcolor{keywordtype}{int} volume);}
+\DoxyCodeLine{16     \textcolor{keywordtype}{int} \mbox{\hyperlink{classVan_a76856d22efd2710459a17a4a21d240b1}{getWeight}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{17     \textcolor{keywordtype}{void} \mbox{\hyperlink{classVan_a574abb4a2459c1439257ff253b3bdad5}{setWeight}}(\textcolor{keywordtype}{int} weight);}
+\DoxyCodeLine{18     \textcolor{keywordtype}{int} \mbox{\hyperlink{classVan_a169a9103322493bef615154688386627}{getCost}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{19     \textcolor{keywordtype}{void} \mbox{\hyperlink{classVan_a04e4daaac00307c83944f23ad439fc65}{setCost}}(\textcolor{keywordtype}{int} cost);}
+\DoxyCodeLine{20     \textcolor{keywordtype}{bool} \textcolor{keyword}{const} operator==(\textcolor{keyword}{const} \mbox{\hyperlink{classVan}{Van}} \&v2) \textcolor{keyword}{const};}
+\DoxyCodeLine{21     \textcolor{keywordtype}{bool} \textcolor{keyword}{const} \mbox{\hyperlink{classVan_a0fc26d9e6dcbe11ddd3c3ae778f73c47}{operator<}}(\textcolor{keyword}{const} \mbox{\hyperlink{classVan}{Van}} \&v2) \textcolor{keyword}{const};}
+\DoxyCodeLine{22     vector<Delivery> assigned;}
+\DoxyCodeLine{23 \};}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//PROJ1\_VAN\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,35 @@
+\hypertarget{algorithms_8h_source}{}\doxysection{algorithms.\+h}
+\label{algorithms_8h_source}\index{src/algorithms.h@{src/algorithms.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef PROJ1\_ALGORITHMS\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define PROJ1\_ALGORITHMS\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}Van.h"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}Delivery.h"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}Combination.h"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <cmath>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{using} std::vector;}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 vector<vector<vector<int>>> \mbox{\hyperlink{algorithms_8cpp_abb164fa39e604aafd43ef42e3446d627}{knapsack}}(vector<Delivery> deliveries, \mbox{\hyperlink{classVan}{Van}} van);}
+\DoxyCodeLine{17 vector<Combination> \mbox{\hyperlink{algorithms_8cpp_ab8e134a3a1bbdf3292e3e895e9061c03}{cenario2}}(vector<Van> vans, vector<Delivery> deliveries);}
+\DoxyCodeLine{18 vector<Combination> \mbox{\hyperlink{algorithms_8cpp_a8e310dc07cff0e0ae053a2a04b92d1e8}{cenario1}}(vector<Van> vans, vector<Delivery> deliveries);}
+\DoxyCodeLine{19 \textcolor{keywordtype}{bool} \mbox{\hyperlink{algorithms_8cpp_ab1a4b74766408cc389e2e89947ff6e29}{sortByPWeightVolume}}(\textcolor{keyword}{const} \mbox{\hyperlink{classDelivery}{Delivery}} \&d1, \textcolor{keyword}{const} \mbox{\hyperlink{classDelivery}{Delivery}} \&d2);}
+\DoxyCodeLine{20 \textcolor{keywordtype}{bool} \mbox{\hyperlink{algorithms_8cpp_ad7d25a45cd343a546e775ed659b246de}{sortByCost}}(\textcolor{keyword}{const} \mbox{\hyperlink{classVan}{Van}} \&v1, \textcolor{keyword}{const} \mbox{\hyperlink{classVan}{Van}} \&v2);}
+\DoxyCodeLine{21 \textcolor{keywordtype}{double} \mbox{\hyperlink{algorithms_8cpp_a9714c7d64c34e177a849b0c70a14fba1}{compose}}(\textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y);}
+\DoxyCodeLine{22 \textcolor{keywordtype}{bool} \mbox{\hyperlink{algorithms_8cpp_a67acf3e35ac14a78f3237325f9c0b94b}{compareComposedDelivery}}(\textcolor{keyword}{const} \mbox{\hyperlink{classDelivery}{Delivery}} \&del1, \textcolor{keyword}{const} \mbox{\hyperlink{classDelivery}{Delivery}} \&del2);}
+\DoxyCodeLine{23 vector<Delivery> \mbox{\hyperlink{algorithms_8cpp_ab2dd08f33a076560c0bf995a4a8cadff}{firstFitIncreasingCen3}}(vector<Delivery> \&deliveries);}
+\DoxyCodeLine{24 \textcolor{keywordtype}{bool} \mbox{\hyperlink{algorithms_8cpp_aaadd4453ccaf2439f70caa4e7020b14c}{compareTime}}(\textcolor{keyword}{const} \mbox{\hyperlink{classDelivery}{Delivery}} \&del1, \textcolor{keyword}{const} \mbox{\hyperlink{classDelivery}{Delivery}} \&del2);}
+\DoxyCodeLine{25 \textcolor{keywordtype}{bool} \mbox{\hyperlink{algorithms_8cpp_aca8bad5bc046ab5e276a5d8a8036012e}{loadVans}}(vector<Van> \&vans);}
+\DoxyCodeLine{26 \textcolor{keywordtype}{bool} \mbox{\hyperlink{algorithms_8cpp_a14c911b99263a831ad4e688a8c63a77f}{loadDeliveries}}(vector<Delivery> \&deliveries);}
+\DoxyCodeLine{27 \textcolor{keywordtype}{void} \mbox{\hyperlink{algorithms_8cpp_a1dfa0ce0f9439234e981e45e32d1abd6}{printCombinations}}(\textcolor{keyword}{const} vector<Combination> \&combs, \textcolor{keyword}{const} \textcolor{keywordtype}{bool} \&cenario);}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//PROJ1\_ALGORITHMS\_H}}
+
+\end{DoxyCode}

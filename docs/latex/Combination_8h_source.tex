@@ -1,0 +1,33 @@
+\hypertarget{Combination_8h_source}{}\doxysection{Combination.\+h}
+\label{Combination_8h_source}\index{src/Combination.h@{src/Combination.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef PROJ1\_COMBINATION\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define PROJ1\_COMBINATION\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}Van.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}Delivery.h"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{class }\mbox{\hyperlink{classCombination}{Combination}} \{}
+\DoxyCodeLine{9 \textcolor{keyword}{private}:}
+\DoxyCodeLine{10     \mbox{\hyperlink{classVan}{Van}} van;}
+\DoxyCodeLine{11     std::vector<Delivery> deliveries;}
+\DoxyCodeLine{12     \textcolor{keywordtype}{int} value;}
+\DoxyCodeLine{13 \textcolor{keyword}{public}:}
+\DoxyCodeLine{14     \mbox{\hyperlink{classCombination_aab0c4616873f0183063ea91349378673}{Combination}}(\textcolor{keyword}{const} \mbox{\hyperlink{classVan}{Van}} \&van, \textcolor{keyword}{const} std::vector<Delivery> \&deliveries, \textcolor{keywordtype}{int} value);}
+\DoxyCodeLine{15     \textcolor{keywordtype}{int} \mbox{\hyperlink{classCombination_acceb7f807b88dbaea2a04481a301b882}{getValue}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{16     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCombination_a26859c6a37699332bf4fabf847d669ce}{setValue}}(\textcolor{keywordtype}{int} value);}
+\DoxyCodeLine{17     \textcolor{keyword}{const} \mbox{\hyperlink{classVan}{Van}} \&\mbox{\hyperlink{classCombination_a9d91d30a50aaaab72313eaa6ce0c552d}{getVan}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{18     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCombination_ae51ce3a14ae544eb375313600e10cc7a}{setVan}}(\textcolor{keyword}{const} \mbox{\hyperlink{classVan}{Van}} \&van);}
+\DoxyCodeLine{19     \textcolor{keyword}{const} std::vector<Delivery> \&\mbox{\hyperlink{classCombination_aa6efb9cb8b74304adf24b45c99555fbd}{getDeliveries}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{20     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCombination_adeab706658b49b777d1ad1fd5ec63a49}{setDeliveries}}(\textcolor{keyword}{const} std::vector<Delivery> \&deliveries);}
+\DoxyCodeLine{21     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCombination_a3016e00e8b5137338e5e698adc2672cd}{addDelivery}}(\mbox{\hyperlink{classDelivery}{Delivery}} delivery);}
+\DoxyCodeLine{22     \textcolor{keywordtype}{bool} \textcolor{keyword}{const} \mbox{\hyperlink{classCombination_a7128ae6c0b71624b512b6c799d47b784}{operator<}}(\textcolor{keyword}{const} \mbox{\hyperlink{classCombination}{Combination}} \&c2) \textcolor{keyword}{const};}
+\DoxyCodeLine{23     \textcolor{keywordtype}{bool} \textcolor{keyword}{const} \mbox{\hyperlink{classCombination_a96f6351c316fa41da31a873e1bf4cff9}{operator==}}(\textcolor{keyword}{const} \mbox{\hyperlink{classCombination}{Combination}} \&c2) \textcolor{keyword}{const};}
+\DoxyCodeLine{24 \};}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//PROJ1\_COMBINATION\_H}}
+
+\end{DoxyCode}

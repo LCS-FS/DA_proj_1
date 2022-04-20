@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['algorithms_2ecpp_0',['algorithms.cpp',['../algorithms_8cpp.html',1,'']]]
+  ['adddelivery_0',['addDelivery',['../classCombination.html#a3016e00e8b5137338e5e698adc2672cd',1,'Combination']]],
+  ['algorithms_2ecpp_1',['algorithms.cpp',['../algorithms_8cpp.html',1,'']]]
 ];

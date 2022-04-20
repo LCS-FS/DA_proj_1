@@ -1,0 +1,38 @@
+\hypertarget{classMenu}{}\doxysection{Menu Class Reference}
+\label{classMenu}\index{Menu@{Menu}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMenu_ad466dd83355124a6ed958430450bfe94}\label{classMenu_ad466dd83355124a6ed958430450bfe94}} 
+{\bfseries Menu} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classMenu}{Menu}} class constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMenu_a831387f51358cfb88cd018e1777bc980}\label{classMenu_a831387f51358cfb88cd018e1777bc980}} 
+{\bfseries $\sim$\+Menu} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classMenu}{Menu}} class destroyer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classMenu_adb390c48051860718e1e535ffd557fab}{int\+Input}} (int min, int max)
+\item 
+\mbox{\Hypertarget{classMenu_af93a970cdfec463a8cb25ca65bf51da5}\label{classMenu_af93a970cdfec463a8cb25ca65bf51da5}} 
+int {\bfseries run} ()
+\begin{DoxyCompactList}\small\item\em Function to run the scenarios. Use the function int\+Input to find out which option the user has chosen, and run the scenario that corresponds to that number. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMenu_adb390c48051860718e1e535ffd557fab}\label{classMenu_adb390c48051860718e1e535ffd557fab}} 
+\index{Menu@{Menu}!intInput@{intInput}}
+\index{intInput@{intInput}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{intInput()}{intInput()}}
+{\footnotesize\ttfamily int Menu\+::int\+Input (\begin{DoxyParamCaption}\item[{int}]{min,  }\item[{int}]{max }\end{DoxyParamCaption})}
+
+Function to check whether the character that is passed on the keyboard is valid Returns -\/1 in case a character is entered that is not a number or that is not within the interval that is passed to it by parameter, and the character in another case 
+\begin{DoxyParams}{Parameters}
+{\em min.} & It corresponds to the minimum value that the user can request, that is, to the first possible scenario \\
+\hline
+{\em max.} & It corresponds to the maximum value that the user can request, that is, to the last possible scenario \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Menu.\+h\item 
+src/\mbox{\hyperlink{Menu_8cpp}{Menu.\+cpp}}\end{DoxyCompactItemize}

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['cenario1_9',['cenario1',['../algorithms_8cpp.html#ab9cb7932b4b5db6fa95884f1067070ad',1,'algorithms.cpp']]]
+  ['adddelivery_0',['addDelivery',['../classCombination.html#a3016e00e8b5137338e5e698adc2672cd',1,'Combination']]]
 ];

@@ -1,38 +1,125 @@
 \hypertarget{classVan}{}\doxysection{Van Class Reference}
 \label{classVan}\index{Van@{Van}}
+
+
+Collaboration diagram for Van\+:
+% FIG 0
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classVan_a4ad27d9f0eab99f20c40fb06d9899fb9}\label{classVan_a4ad27d9f0eab99f20c40fb06d9899fb9}} 
-{\bfseries Van} (int volume, int weight, int cost)
+\mbox{\hyperlink{classVan_a4ad27d9f0eab99f20c40fb06d9899fb9}{Van}} (int volume, int weight, int cost)
 \item 
-\mbox{\Hypertarget{classVan_acc48238aaed58d966f693ca5f4875625}\label{classVan_acc48238aaed58d966f693ca5f4875625}} 
-int {\bfseries get\+Volume} () const
+int \mbox{\hyperlink{classVan_acc48238aaed58d966f693ca5f4875625}{get\+Volume}} () const
 \item 
-\mbox{\Hypertarget{classVan_ab7088875c1e783a67b64e148c83b6380}\label{classVan_ab7088875c1e783a67b64e148c83b6380}} 
-void {\bfseries set\+Volume} (int volume)
+void \mbox{\hyperlink{classVan_ab7088875c1e783a67b64e148c83b6380}{set\+Volume}} (int volume)
 \item 
-\mbox{\Hypertarget{classVan_a76856d22efd2710459a17a4a21d240b1}\label{classVan_a76856d22efd2710459a17a4a21d240b1}} 
-int {\bfseries get\+Weight} () const
+int \mbox{\hyperlink{classVan_a76856d22efd2710459a17a4a21d240b1}{get\+Weight}} () const
 \item 
-\mbox{\Hypertarget{classVan_a574abb4a2459c1439257ff253b3bdad5}\label{classVan_a574abb4a2459c1439257ff253b3bdad5}} 
-void {\bfseries set\+Weight} (int weight)
+void \mbox{\hyperlink{classVan_a574abb4a2459c1439257ff253b3bdad5}{set\+Weight}} (int weight)
 \item 
-\mbox{\Hypertarget{classVan_a169a9103322493bef615154688386627}\label{classVan_a169a9103322493bef615154688386627}} 
-int {\bfseries get\+Cost} () const
+int \mbox{\hyperlink{classVan_a169a9103322493bef615154688386627}{get\+Cost}} () const
 \item 
-\mbox{\Hypertarget{classVan_a04e4daaac00307c83944f23ad439fc65}\label{classVan_a04e4daaac00307c83944f23ad439fc65}} 
-void {\bfseries set\+Cost} (int cost)
+void \mbox{\hyperlink{classVan_a04e4daaac00307c83944f23ad439fc65}{set\+Cost}} (int cost)
 \item 
-\mbox{\Hypertarget{classVan_a9fda08a21f7354d14a85d5d4917fb17d}\label{classVan_a9fda08a21f7354d14a85d5d4917fb17d}} 
-const bool {\bfseries operator==} (const \mbox{\hyperlink{classVan}{Van}} \&v2) const
+\mbox{\Hypertarget{classVan_a574f872ecc4515bd67f619b12f3b88aa}\label{classVan_a574f872ecc4515bd67f619b12f3b88aa}} 
+bool const {\bfseries operator==} (const \mbox{\hyperlink{classVan}{Van}} \&v2) const
 \item 
-\mbox{\Hypertarget{classVan_a2958da8c31c24acde02020701a05846f}\label{classVan_a2958da8c31c24acde02020701a05846f}} 
-const bool {\bfseries operator$<$} (const \mbox{\hyperlink{classVan}{Van}} \&v2) const
+bool const \mbox{\hyperlink{classVan_a0fc26d9e6dcbe11ddd3c3ae778f73c47}{operator$<$}} (const \mbox{\hyperlink{classVan}{Van}} \&v2) const
 \end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classVan_ace058414b34dd449a13f98230a7926ed}\label{classVan_ace058414b34dd449a13f98230a7926ed}} 
+vector$<$ \mbox{\hyperlink{classDelivery}{Delivery}} $>$ {\bfseries assigned}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classVan_a4ad27d9f0eab99f20c40fb06d9899fb9}\label{classVan_a4ad27d9f0eab99f20c40fb06d9899fb9}} 
+\index{Van@{Van}!Van@{Van}}
+\index{Van@{Van}!Van@{Van}}
+\doxysubsubsection{\texorpdfstring{Van()}{Van()}}
+{\footnotesize\ttfamily Van\+::\+Van (\begin{DoxyParamCaption}\item[{int}]{volume,  }\item[{int}]{weight,  }\item[{int}]{cost }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{classVan}{Van}} class constructor 
+\begin{DoxyParams}{Parameters}
+{\em volume} & \\
+\hline
+{\em weight} & \\
+\hline
+{\em reward} & \\
+\hline
+{\em duration} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classVan_a169a9103322493bef615154688386627}\label{classVan_a169a9103322493bef615154688386627}} 
+\index{Van@{Van}!getCost@{getCost}}
+\index{getCost@{getCost}!Van@{Van}}
+\doxysubsubsection{\texorpdfstring{getCost()}{getCost()}}
+{\footnotesize\ttfamily int Van\+::get\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Cost getter. Returns the cost of a delivery \mbox{\Hypertarget{classVan_acc48238aaed58d966f693ca5f4875625}\label{classVan_acc48238aaed58d966f693ca5f4875625}} 
+\index{Van@{Van}!getVolume@{getVolume}}
+\index{getVolume@{getVolume}!Van@{Van}}
+\doxysubsubsection{\texorpdfstring{getVolume()}{getVolume()}}
+{\footnotesize\ttfamily int Van\+::get\+Volume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Volume getter. Returns the value of a delivery \mbox{\Hypertarget{classVan_a76856d22efd2710459a17a4a21d240b1}\label{classVan_a76856d22efd2710459a17a4a21d240b1}} 
+\index{Van@{Van}!getWeight@{getWeight}}
+\index{getWeight@{getWeight}!Van@{Van}}
+\doxysubsubsection{\texorpdfstring{getWeight()}{getWeight()}}
+{\footnotesize\ttfamily int Van\+::get\+Weight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Weight getter. Returns the weight of a delivery \mbox{\Hypertarget{classVan_a0fc26d9e6dcbe11ddd3c3ae778f73c47}\label{classVan_a0fc26d9e6dcbe11ddd3c3ae778f73c47}} 
+\index{Van@{Van}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Van@{Van}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool const Van\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classVan}{Van}} \&}]{v2 }\end{DoxyParamCaption}) const}
+
+\mbox{\hyperlink{classVan}{Van}} Operator \texorpdfstring{$<$}{<} Returns whether the value of the volume of a combination is less than the one passed as parameter 
+\begin{DoxyParams}{Parameters}
+{\em v2} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classVan_a04e4daaac00307c83944f23ad439fc65}\label{classVan_a04e4daaac00307c83944f23ad439fc65}} 
+\index{Van@{Van}!setCost@{setCost}}
+\index{setCost@{setCost}!Van@{Van}}
+\doxysubsubsection{\texorpdfstring{setCost()}{setCost()}}
+{\footnotesize\ttfamily void Van\+::set\+Cost (\begin{DoxyParamCaption}\item[{int}]{cost }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{classDelivery}{Delivery}} cost setter. Stores the value passed to it by parameter in the cost attribute 
+\begin{DoxyParams}{Parameters}
+{\em cost} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classVan_ab7088875c1e783a67b64e148c83b6380}\label{classVan_ab7088875c1e783a67b64e148c83b6380}} 
+\index{Van@{Van}!setVolume@{setVolume}}
+\index{setVolume@{setVolume}!Van@{Van}}
+\doxysubsubsection{\texorpdfstring{setVolume()}{setVolume()}}
+{\footnotesize\ttfamily void Van\+::set\+Volume (\begin{DoxyParamCaption}\item[{int}]{volume }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{classVan}{Van}} volume setter. Stores the value passed to it by parameter in the volume attribute 
+\begin{DoxyParams}{Parameters}
+{\em volume} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classVan_a574abb4a2459c1439257ff253b3bdad5}\label{classVan_a574abb4a2459c1439257ff253b3bdad5}} 
+\index{Van@{Van}!setWeight@{setWeight}}
+\index{setWeight@{setWeight}!Van@{Van}}
+\doxysubsubsection{\texorpdfstring{setWeight()}{setWeight()}}
+{\footnotesize\ttfamily void Van\+::set\+Weight (\begin{DoxyParamCaption}\item[{int}]{weight }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{classDelivery}{Delivery}} weight setter. Stores the value passed to it by parameter in the weight attribute 
+\begin{DoxyParams}{Parameters}
+{\em weight} & \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 src/Van.\+h\item 
-src/Van.\+cpp\end{DoxyCompactItemize}
+src/\mbox{\hyperlink{Van_8cpp}{Van.\+cpp}}\end{DoxyCompactItemize}
