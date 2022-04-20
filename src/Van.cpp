@@ -52,7 +52,7 @@ bool const Van::operator==(const Van &v2) const {
 }
 
 /// Van Operator <
-/// Returns if the value of the volume of a combination is less than the one passed as parameter
+/// Returns whether the value of the volume of a combination is less than the one passed as parameter
 /// \param v2
 bool const Van::operator<(const Van &v2) const {
     if(weight == v2.getWeight()) return volume < v2.getVolume();

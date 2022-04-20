@@ -60,7 +60,7 @@ Delivery::Delivery(int volume, int weight, int reward, int duration) : volume(vo
                                                                        duration(duration) {}
 
 /// Operator ==
-/// Returns if the attributes of a combination are the same as the one passed as parameter
+/// Returns whether the attributes of a combination are the same as the one passed as parameter
 /// \param d2
 bool const Delivery::operator==(const Delivery &d2) const {
     if(volume == d2.getVolume() && weight == d2.getWeight() && reward == d2.getReward() && duration == d2.getDuration()) return true;

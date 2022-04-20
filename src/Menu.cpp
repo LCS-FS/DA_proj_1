@@ -9,7 +9,7 @@ using namespace std;
 /// \file
 /// Menu class functions
 
-/// Function to check if the character that is passed on the keyboard is valid
+/// Function to check whether the character that is passed on the keyboard is valid
 /// Returns -1 in case a character is entered that is not a number or that is not within the interval that is passed to it by parameter, and the character in another case
 /// \param min. It corresponds to the minimum value that the user can request, that is, to the first possible scenario
 /// \param max. It corresponds to the maximum value that the user can request, that is, to the last possible scenario
@@ -30,7 +30,7 @@ int Menu::intInput(int min, int max) {
     return output;
 }
 
-/// Function to run the scenaries. Use the function intInput to find out which option the user has chosen, and run the scenario that corresponds to that number
+/// Function to run the scenarios. Use the function intInput to find out which option the user has chosen, and run the scenario that corresponds to that number
 int Menu::run() {
     int option;
 

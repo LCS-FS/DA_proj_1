@@ -20,18 +20,18 @@ void Combination::setVan(const Van &van) {
 }
 
 /// Delivery getter
-/// Returns an array of deliveries
+/// Returns a vector of deliveries
 const std::vector<Delivery> &Combination::getDeliveries() const {
     return deliveries;
 }
 
-/// Deliveries setter. Stores the value passed to it by parameter in the array of deliveries
+/// Deliveries setter. Stores the value passed to it by parameter in the vector of deliveries
 /// \param van
 void Combination::setDeliveries(const std::vector<Delivery> &deliveries) {
     Combination::deliveries = deliveries;
 }
 
-/// Function to add a delivery to the array
+/// Function to add a delivery to the vector
 /// \param van
 void Combination::addDelivery(Delivery delivery) {
     deliveries.push_back(delivery);
@@ -58,14 +58,14 @@ Combination::Combination(const Van &van, const std::vector<Delivery> &deliveries
                                                                                                value(value) {}
 
 /// Operator <
-/// Returns if the value of a combination is less than the one passed as parameter
+/// Returns whether the value of a combination is less than the one passed as parameter
 /// \param c2
 bool const Combination::operator<(const Combination &c2) const {
     return value < c2.getValue();
 }
 
 /// Combination Operator ==
-/// Returns if the attributes of a combination are the same as the one passed as parameter
+/// Returns whether the attributes of a combination are the same as the one passed as parameter
 /// \param c2
 bool const Combination::operator==(const Combination &c2) const {
     return van == c2.getVan() && deliveries == c2.getDeliveries() && value == c2.getValue();
