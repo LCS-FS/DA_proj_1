@@ -3,7 +3,7 @@
 /// Algorithms for each scenario and auxiliary functions
 
 /// Algorithm for cenario 1
-/// returns a vector of Combinations representing the best distribution of deliveries per van, so that we minimize the number of used vans \n
+/// Returns a vector of Combinations representing the best distribution of deliveries per van, so that we minimize the number of used vans \n
 /// Time Complexity: O(n^2)
 /// \param vans
 /// \param deliveries
@@ -46,6 +46,10 @@ vector<Combination> cenario1(vector<Van> vans, vector<Delivery> deliveries){
     return ret2;
 }
 
+/// Function to order two deliveries based on weight of its products
+/// Returns if one delivery is less than another based on the weight of your products
+/// \param d1
+/// \param d2
 bool sortByPWeightVolume(const Delivery &d1, const Delivery &d2){
     if(d1.getWeight() == d2.getWeight()) return d1.getVolume() < d2.getVolume();
     return d1.getWeight() < d2.getWeight();
@@ -53,7 +57,11 @@ bool sortByPWeightVolume(const Delivery &d1, const Delivery &d2){
 
 //==================================================================================================================================
 
-
+/// Algorithm for cenario 2
+/// Returns an array with a strategy based on minimizing the cost difference between a courier's commission and the benefit of a delivery
+/// Time Complexity:
+/// \param vans
+/// \param deliveries
 vector<Combination> cenario2(vector<Van> vans, vector<Delivery> deliveries) {
     vector<Combination> ret;
     vector<Van> auxV;
@@ -109,6 +117,11 @@ vector<Combination> cenario2(vector<Van> vans, vector<Delivery> deliveries) {
     return ret;
 }
 
+/// Function knapsat algorithm
+/// Returns an array with positions based on the knapsack algorithm
+/// Time Complexity:
+/// \param deliveries
+/// \param van
 vector<vector<vector<int>>> knapsack(vector<Delivery> deliveries, Van van){
     int maxW = van.getWeight(), maxV = van.getVolume(), n = deliveries.size();
     int current, last;
@@ -133,19 +146,35 @@ vector<vector<vector<int>>> knapsack(vector<Delivery> deliveries, Van van){
     return table;
 }
 
+/// Function to compare the cost of two vans
+/// Returns if the cost of a vans is less than another one
+/// \param van1
+/// \param van2
 bool sortByCost(const Van &v1, const Van &v2) {
     return v1.getCost() < v2.getCost();
 }
 
+/// Function to
+/// Returns
+/// \param x
+/// \param y
 double compose(int x, int y){ //it rounds to 3 decimal cases (ignores whats after)
     double ans = sqrt(pow(x, 2) + pow(y, 2));
     return floor(ans*1000) / 1000;
 }
 
+/// Function to compare the volume of two deliveries
+/// Returns if the volume of a delivery is less than another one
+/// \param del1
+/// \param del2
 bool compareComposedDelivery(const Delivery &del1, const Delivery &del2){
     return compose(del1.getVolume(), del1.getWeight()) < compose(del2.getVolume(), del2.getWeight());
 }
 
+/// Algorithm for cenario 3
+/// Returns an array with a strategy based on minimizing the delivery time of the products for a single van
+/// Time Complexity:
+/// \param deliveries
 vector<Delivery> firstFitIncreasingCen3(vector<Delivery> &deliveries) {
     unsigned time = 28800;
     bool done = false;
@@ -165,10 +194,17 @@ vector<Delivery> firstFitIncreasingCen3(vector<Delivery> &deliveries) {
     return result;
 }
 
+/// Function to compare the duration of two deliveries
+/// Returns if the volume of a delivery is less than another one
+/// \param del1
+/// \param del2
 bool compareTime(const Delivery &del1, const Delivery &del2) {
     return (del1.getDuration() < del2.getDuration());
 }
 
+/// Function to check if the vans can be loaded
+/// Returns if the file with the vans has been opened correctly
+/// \param vans
 bool loadVans(vector<Van> &vans) {
     ifstream file;
     file.open("../../input/carrinhas.txt");
@@ -184,6 +220,9 @@ bool loadVans(vector<Van> &vans) {
     return true;
 }
 
+/// Function to check if the deliveries can be loaded
+/// Returns if the file with the deliveries has been opened correctly
+/// \param deliveries
 bool loadDeliveries(vector<Delivery> &deliveries) {
     ifstream file;
     file.open("../../input/encomendas.txt");
@@ -198,6 +237,11 @@ bool loadDeliveries(vector<Delivery> &deliveries) {
     }
     return true;
 }
+
+/// Function to show the combinations
+/// Returns the the scenario combinations
+/// \param combs
+/// \param cenario
 //false = cenario 1         true = cenario 2
 void printCombinations(const vector<Combination> &combs, const bool &cenario){
     int cnt = 0; //counting number of deliveries for cenario 1 stats
