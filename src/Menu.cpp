@@ -48,9 +48,20 @@ int Menu::run() {
         case 2:
             printCombinations(cenario2(vans, deliveries), true);
             break;
-        case 3:
-            cout << "Made " << firstFitIncreasingCen3(deliveries).size() << " deliveries today." << endl;
+        case 3: {
+            vector<Delivery> ret;
+            ret = firstFitIncreasingCen3(deliveries);
+            for (auto delivery: ret) {
+                cout << "Delivery:    Volume: " << delivery.getVolume()
+                     << string(8 - to_string(delivery.getVolume()).length(), ' ')
+                     << "Weight: " << delivery.getWeight() << string(8 - to_string(delivery.getWeight()).length(), ' ')
+                     << "Reward: "
+                     << delivery.getReward() << string(8 - to_string(delivery.getReward()).length(), ' ')
+                     << "Duration: " << delivery.getDuration() << '\n';
+            }
+            cout << "\nMade " << ret.size() << " deliveries today." << endl;
             break;
+        }
         default:
             return 0;
     }
